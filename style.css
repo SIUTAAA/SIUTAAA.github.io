@@ -1,17 +1,18 @@
-html {
-  background: url(/CR.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
 body {
   font-size: 19px;
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 30px;
   margin: 0;
   padding: 0;
-  animation: intro 2s;
+  animation: intro 3s;
   top: 0;
   left: 0;
+  background: url(/CR.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  /* backdrop-filter: blur(10px); */
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
 }
 
 li {
@@ -48,6 +49,7 @@ a:hover {
 
 .header > img {
   height: 250px;
+  border-radius: 10px;
 }
 
 ul.reset {
@@ -61,15 +63,26 @@ ul.reset > li > a {
 @keyframes intro {
   from {
     opacity: 0.0;
+    backdrop-filter: blur(1px);
   }
   to {
     opacity: 1;
+    backdrop-filter: blur(10px);
   }
 }
 
 .overlay {
-  padding: 20px;
+  padding: 40px;
   background-color: rgba(255, 255, 255, 0.5);
-  width: 300px;
+  width: 250px;
   border-radius: 5px;
+  margin-top: 50px;
+}
+
+footer {
+  color:white;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
